@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Closure Notice</title>
+
+    <style>
+        /* =====================================================
+           COLOR VARIABLES
+           Change these three values to customize the site
+        ====================================================== */
+        :root {
+            --primary-color: #069194;
+            --secondary-color: #D8621F;
+            --tertiary-color: #f4f8fb;
+            --quarternary-color: #737373;
+
+            --text-color: #2b2b2b;
+            --light-text: #6b7280;
+            --border-color: #d7e0e8;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--tertiary-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .page-wrapper {
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08),
+                0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        /* ============================================
+           LOGO
+        ============================================ */
+
+        .banner {
+            text-align: center;
+            padding: 50px 0px 0px 0px;
+        }
+
+        /* ============================================
+           CONTENT
+        ============================================ */
+
+        .content {
+            padding: 40px;
+        }
+
+        .notice-banner {
+            background: var(--tertiary-color);
+            border-left: 5px solid var(--primary-color);
+            padding: 18px 22px;
+            border-radius: 10px;
+            margin-bottom: 32px;
+        }
+
+        .notice-banner strong {
+            color: var(--primary-color);
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .section p {
+            margin: 0 0 16px;
+        }
+
+        .contact-card {
+            background: #fafcff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-item h3 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-item p {
+            margin: 0;
+        }
+
+        
+        /* ============================================
+           Button
+        ============================================ */
+
+        .external-link-button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 10px;
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .external-link-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+        }
+
+        .external-link-button:active {
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           FOOTER
+        ============================================ */
+
+        .footer {
+            background: #f8fafc;
+            border-top: 1px solid var(--border-color);
+            padding: 24px 40px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--light-text);
+        }
+
+        /* ============================================
+           MOBILE
+        ============================================ */
+
+        @media (max-width: 700px) {
+            .header {
+                padding: 40px 24px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 28px 22px;
+            }
+
+            .footer {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+
+            <!-- ======================================
+                 LOGO
+            ======================================= -->
+
+            <section class="banner">
+                <img src="logo.png" alt="Spokane Allergy Logo"/>
+            </section>
+
+            <!-- ======================================
+                 MAIN CONTENT
+            ======================================= -->
+            <main class="content">
+
+                <!-- SECTION 1: Closure -->
+                <section class="section">
+                    <h2>Closure</h2>
+
+                    <p>
+                        Spokane Allergy and Asthma had to close its doors on Feb 18, 2026 due to financial failure. We are so sorry for impact that this has on your quality of life and health. Thank you for the trust you placed in us for your health care. Upon closing, Spokane Allergy and Asthma sent out a letter notifying patients of this closure that included information about other allergy or ENT offices where they could obtain care and also how patients could request a copy of their records. 
+                    </p>
+                </section>
+
+                <!-- SECTION 2: Records -->
+                <section class="section">
+                    <h2>Records</h2>
+
+                    <p>
+                        Your medical record information is kept private and secured according to state and federal laws. Your records will be held in a HIPPA complaint manner by Desert River Solutions. On their website: <a href="http://www.desertriversolutions.com/requests/">www.desertriversolutions.com/requests/</a> you can access a records release form. This will allow Desert River Solutions to release the record to whom you choose. Instructions on the website. Other contact information is as follows: email: <a href="mailto:requests@DesertRiverSolutions.com">requests@DesertRiverSolutions.com</a>, phone 408-577-3150, fax 520-214-0068.
+                    </p>
+                </section>
+
+                <!-- SECTION 3: Billing -->
+                <section class="section">
+                    <h2>Billing</h2>
+
+                    <p>
+                        There is a <strong>new billing team</strong> (Medico.cx).  We are continuing to bill out the accounts receivable for care that we provided. If you have questions about your billing or how to make payments, please call <strong>208-252-6304 ext 113.</strong>
+                    </p>
+
+                    <p>
+                        Practice Mailing Address: <br/>
+                        Spokane Allergy and Asthma <br/>
+                        PO Box 41 <br/>
+                        Veradale, WA 99037-0041
+                    </p>
+                </section>
+
+                <!-- SECTION 4: Pay -->
+                <section class="section">
+                    <h2>Payments</h2>
+
+                    <p>
+                        Please use the following button to access the old bill payment page:
+                    </p>
+
+                    <a
+                        href="https://spokaneallergy.securepayments.cardpointe.com/pay"
+                        class="external-link-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Pay Your Bill
+                    </a>
+
+                </section>
+
+                <!-- SECTION 5: Alternative care options -->
+                <section class="section">
+                    <h2>Alternative Care Options</h2>
+
+                    <p>
+                        Allergy and ENT practices in the area include:
+                    </p>
+
+                    <p>
+                        <strong>Asthma and Allergy of Idaho (in CDA)</strong> <br/>
+                        714 W. Appleway Ave, Suite 200 <br/>
+                        Coeur d&apos;Alene, ID 83814 <br/>
+                        208-665-1552
+                    </p>
+
+                    <p>
+                        <strong>Advanced Allergy and Asthma</strong> <br/>
+                        12615 E Mission Ave, Suite 200 <br/>
+                        Spokane Valley, WA 99216 <br/>
+                        509-960-5520
+                    </p>
+
+                    <p>
+                        <strong>Spokane Valley ENT</strong> <br/>
+                        1424 N. McDonald Rd., Suite 101 <br/>
+                        Spokane Valley, WA 99216 <br/>
+                        509-928-7272
+                    </p>
+
+                    <p>
+                        <strong>St. Joseph&apos;s ENT (Post Falls)</strong> <br/>
+                        849 N. Syringa St. <br/>
+                        Post Falls, ID 83854 <br/>
+                        208-777-1320
+                    </p>
+
+                    <p>
+                       <strong>Spokane ENT</strong> <br/>
+                        217 W Cataldo Ave, Suite 200 <br/>
+                        Spokane, WA 99201 <br/>
+                        509-624-2326 <br/>
+                        See Spokane ENT website for their other location options
+                    </p>
+
+                </section>
+
+            </main>
+
+            <!-- ======================================
+                 FOOTER
+            ======================================= -->
+            <footer class="footer">
+                © 2026 Spokane Allergy &amp; Asthma Clinic. All rights reserved.
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>
